@@ -64,7 +64,7 @@ Trajectory TrajectoryLoaderNode::createTrajectory(const Points & points)
   for (auto & point : points) {
     TrajectoryPoint trajectory_point;
     Pose pose;
-    auto q = tier4_autoware_utils::createQuaternionFromYaw(point[2]);
+    auto q =  autoware_universe_utils::createQuaternionFromYaw(point[2]);
     pose.position.x = point[0];
     pose.position.y = point[1];
     pose.position.z = 0.0;
